@@ -84,22 +84,22 @@ const App = () => {
 };
 
 App.propTypes = {
-  items: PropTypes.array,
-  renderState: PropTypes.string,
-  cart: PropTypes.array,
-  values: PropTypes.shape({
+  // items: PropTypes.array,
+  // renderState: PropTypes.string,
+  // cart: PropTypes.array,
+  // values: PropTypes.shape({
     firstName: PropTypes.string,
     lastName: PropTypes.string,
     email: PropTypes.string,
   }),
-  submitted: PropTypes.bool,
-  valid: PropTypes.bool,
-  handleFirstNameInputChange: PropTypes.func,
-  handleLastNameInputChange: PropTypes.func,
-  handleEmailInputChange: PropTypes.func,
-  handleSubmit: PropTypes.func,
-  handleClick: PropTypes.func,
-  handleChange: PropTypes.func,
+  // submitted: PropTypes.bool,
+  // valid: PropTypes.bool,
+  // handleFirstNameInputChange: PropTypes.func,
+  // handleLastNameInputChange: PropTypes.func,
+  // handleEmailInputChange: PropTypes.func,
+  // handleSubmit: PropTypes.func,
+  // handleClick: PropTypes.func,
+  // handleChange: PropTypes.func,
 };
 
 export default App;
