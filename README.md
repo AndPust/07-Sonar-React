@@ -9,4 +9,4 @@ The server app is here: https://github.com/AndPust/07-Sonar-Kotlin
 
 Gzipped MP4 demo here: https://github.com/AndPust/Demos-E-Biznes/blob/main/07-Sonar/07-Sonar.mp4.gz
 
-✅ 3.0 requirement: https://github.com/AndPust/07-Sonar/commit/aef704d3d50b1bc4ccf831bd11ea08e98f8cb44e
+✅ 3.0 requirement: https://github.com/AndPust/07-Sonar-React/commit/aef704d3d50b1bc4ccf831bd11ea08e98f8cb44e
