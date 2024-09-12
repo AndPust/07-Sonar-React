@@ -61,7 +61,7 @@ const Cart = ({ cart, setCart, setRenderState, handleChange }) => {
         <span>${price}</span>
         { cart.length > 0 &&
             // <button className="payment" onClick={() => handleCart()}>Payment</button>
-            <div className="payment" onClick={handleCart} role="button">
+            <div className="payment" onClick={handleCart}>
                 <span>Payment</span>
             </div>
         }
