@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 //import cartRequest from "../cartRequest"
 import "../styles/cart.css";
 
-const Cart = ({ cart, setCart, useCart, setRenderState, handleChange }) => {
+const Cart = ({ cart, setCart, setRenderState, handleChange }) => {
   const [price, setPrice] = useState(0);
 
 
@@ -59,7 +59,7 @@ const Cart = ({ cart, setCart, useCart, setRenderState, handleChange }) => {
         <span>Total cart ammount</span>
         <span>${price}</span>
         { cart.length > 0 &&
-            <div className="payment" onClick={handleCart}>
+            <div className="payment" onClick={handleCart} role="button">
                 <span>Payment</span>
             </div>
         }

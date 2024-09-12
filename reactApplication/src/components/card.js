@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const Cards = ({ item, handleClick }) => {
   const { name, description, price, img } = item;
@@ -15,6 +16,15 @@ const Cards = ({ item, handleClick }) => {
       </div>
     </div>
   );
+};
+
+Cards.propTypes = {
+  item: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default Cards;
