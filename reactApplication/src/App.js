@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 import Store from "./components/store";
 import Navbar from "./components/navbar";
 import Cart from "./components/cart";
@@ -80,6 +81,25 @@ const App = () => {
       {renderState === "payment" && <Payment values={values} handleFirstNameInputChange={handleFirstNameInputChange} handleLastNameInputChange={handleLastNameInputChange} handleEmailInputChange={handleEmailInputChange} submitted={submitted} handleSubmit={handleSubmit} valid={valid}/> }
     </React.Fragment>
   );
+};
+
+App.propTypes = {
+  items: PropTypes.array,
+  renderState: PropTypes.string,
+  cart: PropTypes.array,
+  values: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    email: PropTypes.string,
+  }),
+  submitted: PropTypes.bool,
+  valid: PropTypes.bool,
+  handleFirstNameInputChange: PropTypes.func,
+  handleLastNameInputChange: PropTypes.func,
+  handleEmailInputChange: PropTypes.func,
+  handleSubmit: PropTypes.func,
+  handleClick: PropTypes.func,
+  handleChange: PropTypes.func,
 };
 
 export default App;

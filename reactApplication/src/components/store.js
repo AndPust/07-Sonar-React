@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import useItems from "../itemHook";
+import PropTypes from 'prop-types';
+// import useItems from "../itemHook";
 import Cards from "./card";
 import "../styles/store.css";
 
@@ -11,6 +12,17 @@ const Store = ({ handleClick, items }) => {
       ))}
     </section>
   );
+};
+
+Store.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    // Add other item properties here, for example:
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    // ... other properties
+  })).isRequired,
 };
 
 export default Store;

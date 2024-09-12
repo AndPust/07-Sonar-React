@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 import "../styles/payment.css";
 
 const Payment = ({
@@ -54,6 +55,20 @@ const Payment = ({
           </form>
         </div>
   );
+};
+
+Payment.propTypes = {
+  values: PropTypes.shape({
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+  }).isRequired,
+  handleFirstNameInputChange: PropTypes.func.isRequired,
+  handleLastNameInputChange: PropTypes.func.isRequired,
+  handleEmailInputChange: PropTypes.func.isRequired,
+  submitted: PropTypes.bool.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  valid: PropTypes.bool.isRequired,
 };
 
 export default Payment;

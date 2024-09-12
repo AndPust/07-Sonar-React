@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 //import cartRequest from "../cartRequest"
 import "../styles/cart.css";
 
@@ -59,6 +60,7 @@ const Cart = ({ cart, setCart, setRenderState, handleChange }) => {
         <span>Total cart ammount</span>
         <span>${price}</span>
         { cart.length > 0 &&
+            // <button className="payment" onClick={() => handleCart()}>Payment</button>
             <div className="payment" onClick={handleCart} role="button">
                 <span>Payment</span>
             </div>
@@ -66,6 +68,19 @@ const Cart = ({ cart, setCart, setRenderState, handleChange }) => {
       </div>
     </article>
   );
+};
+
+Cart.propTypes = {
+  cart: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    name: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    qty: PropTypes.number.isRequired,
+  })).isRequired,
+  setCart: PropTypes.func.isRequired,
+  setRenderState: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default Cart;

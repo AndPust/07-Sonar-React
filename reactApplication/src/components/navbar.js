@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import "../styles/navbar.css";
 
 const Navbar = ({ setRenderState, size }) => {
@@ -17,6 +18,11 @@ const Navbar = ({ setRenderState, size }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  size: PropTypes.number.isRequired,
+  setRenderState: PropTypes.func.isRequired,
 };
 
 export default Navbar;
